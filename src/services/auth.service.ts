@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,11 @@ export class AuthService {
   constructor(private http: HttpClient) {
   }
 
-  login(model: any) {
+  register(model: any): Observable<any> {
+    return this.http.post(this.baseUrl + 'register', model);
+  }
+
+  login(model: any): Observable<any> {
     return this.http.post(this.baseUrl + 'login', model).pipe(
       map((response: any) => {
         if (response && response.token) {

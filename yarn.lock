@@ -197,6 +197,13 @@
   dependencies:
     tslib "^1.9.0"
 
+"@auth0/angular-jwt@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@auth0/angular-jwt/-/angular-jwt-2.1.0.tgz#5c90ee7d927e70cefa8db7c89a64eb67c05a912d"
+  integrity sha512-1KFtqswmJeM8JiniagSenpwHKTf9l+W+TmfsWV+x9SoZIShc6YmBsZDxd+oruZJL7MbJlxIJ3SQs7Yl1wraQdg==
+  dependencies:
+    url "^0.11.0"
+
 "@babel/code-frame@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.0.0.tgz#06e2ab19bdb535385559aabb5ba59729482800f8"
@@ -4557,6 +4564,11 @@ neo-async@^2.5.0, neo-async@^2.6.0:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
+
+ngx-bootstrap@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/ngx-bootstrap/-/ngx-bootstrap-4.2.0.tgz#866e81b8976c0991b22fc23504df14d4fb36ca12"
+  integrity sha512-+oqkTiNWgd0IOUI0+DDlBjbdYN40Ymqu5kBgsbfxTnySOVgWfdO4BLbbv5YuKRWNnzkCLECLiL5WWB6WrWmDsA==
 
 nice-try@^1.0.4:
   version "1.0.5"

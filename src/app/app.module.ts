@@ -10,6 +10,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { ErrorInterceptorProvider } from './services/error.interceptor';
 import { AuthService } from './services/auth.service';
 import { NotificationService } from './services/notification.service';
+import { BsDropdownModule } from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NotificationService } from './services/notification.service';
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BsDropdownModule.forRoot()
   ],
   providers: [
     AuthService,

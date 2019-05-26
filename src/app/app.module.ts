@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ErrorInterceptorProvider } from './services/error.interceptor';
+import { AuthService } from './services/auth.service';
+import { NotificationService } from './services/notification.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,11 @@ import { ErrorInterceptorProvider } from './services/error.interceptor';
     HttpClientModule,
     FormsModule
   ],
-  providers: [ErrorInterceptorProvider],
+  providers: [
+    AuthService,
+    ErrorInterceptorProvider,
+    NotificationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

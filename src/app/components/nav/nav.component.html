@@ -21,14 +21,14 @@
   </div>
 
   <form *ngIf="!loggedIn()" #loginForm="ngForm" class="form-inline" (ngSubmit)="login()">
-    <input class="form-control mr-sm-2"
+    <input class="form-control mr-sm-2 bg-light"
            type="text"
            name="username"
            placeholder="Username"
            required
            [(ngModel)]="model.username">
 
-    <input class="form-control mr-sm-2"
+    <input class="form-control mr-sm-2 bg-light out"
            type="password"
            name="password"
            placeholder="Password"

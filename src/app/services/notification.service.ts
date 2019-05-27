@@ -19,7 +19,6 @@ export class NotificationService {
   }
 
   success(message: string) {
-    console.log('here');
     alertify.success(message);
   }
 

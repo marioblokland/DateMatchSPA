@@ -1,0 +1,19 @@
+.card {
+  width: 12rem;
+}
+
+.card img {
+  transform: scale(1);
+  transition: .1s ease-out;
+  max-width: 100%;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+  transition: .3s ease-out;
+  opacity: .8;
+}
+
+.card-img-wrapper {
+  overflow: hidden;
+}

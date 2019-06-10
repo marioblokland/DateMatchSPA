@@ -12,11 +12,13 @@ import { ErrorInterceptorProvider } from './services/error.interceptor';
 import { AuthService } from './services/auth.service';
 import { NotificationService } from './services/notification.service';
 import { BsDropdownModule } from 'ngx-bootstrap';
-import { MemberListComponent } from './components/member-list/member-list.component';
+import { MemberListComponent } from './components/members/member-list/member-list.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { ListsComponent } from './components/lists/lists.component';
 import { appRoutes } from './routes';
 import { AuthGuard } from './guards/auth.guard';
+import { UserService } from './services/user.service';
+import { MemberCardComponent } from './components/members/member-card/member-card.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { AuthGuard } from './guards/auth.guard';
     RegisterComponent,
     MemberListComponent,
     MessagesComponent,
-    ListsComponent
+    ListsComponent,
+    MemberCardComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { AuthGuard } from './guards/auth.guard';
     AuthService,
     ErrorInterceptorProvider,
     NotificationService,
-    AuthGuard
+    AuthGuard,
+    UserService
   ],
   bootstrap: [AppComponent]
 })

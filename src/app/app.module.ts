@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
-import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { JwtModule } from '@auth0/angular-jwt';
+
+import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { RegisterComponent } from './components/register/register.component';
@@ -20,7 +20,7 @@ import { appRoutes } from './routes';
 import { AuthGuard } from './guards/auth.guard';
 import { UserService } from './services/user.service';
 import { MemberCardComponent } from './components/members/member-card/member-card.component';
-import { environment } from '../environments/environment';
+import { MemberDetailComponent } from './components/members/member-detail/member-detail.component';
 
 export function getToken() {
   return localStorage.getItem('token');
@@ -35,7 +35,8 @@ export function getToken() {
     MemberListComponent,
     MessagesComponent,
     ListsComponent,
-    MemberCardComponent
+    MemberCardComponent,
+    MemberDetailComponent
   ],
   imports: [
     BrowserModule,

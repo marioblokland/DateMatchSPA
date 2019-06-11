@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { JwtModule } from '@auth0/angular-jwt';
+import { BsDropdownModule, TabsModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
@@ -12,7 +13,6 @@ import { RegisterComponent } from './components/register/register.component';
 import { ErrorInterceptorProvider } from './services/error.interceptor';
 import { AuthService } from './services/auth.service';
 import { NotificationService } from './services/notification.service';
-import { BsDropdownModule } from 'ngx-bootstrap';
 import { MemberListComponent } from './components/members/member-list/member-list.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { ListsComponent } from './components/lists/lists.component';
@@ -36,7 +36,7 @@ export function getToken() {
     MessagesComponent,
     ListsComponent,
     MemberCardComponent,
-    MemberDetailComponent
+    MemberDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +44,7 @@ export function getToken() {
     FormsModule,
     BsDropdownModule.forRoot(),
     RouterModule.forRoot(appRoutes),
+    TabsModule.forRoot(),
     JwtModule.forRoot({
       config: {
         tokenGetter: getToken,

@@ -19,6 +19,10 @@
   position: relative;
 }
 
+.card-img-top {
+  cursor: pointer;
+}
+
 .member-icons {
   position: absolute;
   bottom: -30%;

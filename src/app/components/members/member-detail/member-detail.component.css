@@ -1,0 +1,5 @@
+.member-tab-set > ul.nav-tabs > li.nav-item > a.nav-link.active {
+  border-bottom-color: transparent;
+}
+
+

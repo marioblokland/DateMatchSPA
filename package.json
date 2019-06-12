@@ -25,6 +25,7 @@
     "core-js": "^2.5.4",
     "font-awesome": "^4.7.0",
     "ngx-bootstrap": "^4.2.0",
+    "ngx-gallery": "^5.10.0",
     "rxjs": "~6.3.3",
     "shards-ui": "^2.1.2",
     "tslib": "^1.9.0",

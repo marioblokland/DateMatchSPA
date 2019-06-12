@@ -1,0 +1,19 @@
+.member-tab-set > ul.nav-tabs > li.nav-item > a.nav-link {
+  border: none;
+  color: var(--gray);
+}
+
+.member-tab-set > ul.nav-tabs > li.nav-item > a.nav-link.active {
+  border-bottom: 2px solid var(--blue);
+  color: initial;
+}
+
+.member-tab-set > ul.nav-tabs > li.nav-item > a.nav-link:active {
+  border: none;
+  border-bottom: 2px solid var(--blue);
+}
+
+.member-tab-set > ul.nav-tabs > li.nav-item > a.nav-link:hover {
+  border: none;
+  border-bottom: 2px solid var(--blue);
+}

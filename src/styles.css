@@ -6,13 +6,6 @@
 @import '../node_modules/shards-ui/dist/css/shards.min.css';
 
 /* TODO move to own files */
-.form-control {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  border: 0;
-}
-
 .dropdown-menu {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;

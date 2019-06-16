@@ -1,8 +1,10 @@
-import { Component, HostListener, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { User } from '../../../models/user';
 import { ActivatedRoute } from '@angular/router';
 import { NotificationService } from '../../../services/notification.service';
 import { NgForm } from '@angular/forms';
+import { UserService } from '../../../services/user.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-member-edit',
@@ -15,15 +17,24 @@ export class MemberEditComponent implements OnInit {
 
   user: User;
 
-  constructor(private route: ActivatedRoute, private notify: NotificationService) {
-  }
+  constructor(
+    private userService: UserService,
+    private route: ActivatedRoute,
+    private notify: NotificationService,
+    private authService: AuthService
+  ) {}
 
   ngOnInit() {
-    this.route.data.subscribe(data => this.user = data.user);
+    this.route.data.subscribe(data => (this.user = data.user));
   }
 
   updateUser() {
-    this.notify.success('Profile updated successfully');
-    this.editForm.reset(this.user);
+    this.userService.updateUser(this.authService.decodedToken.nameid, this.user).subscribe(
+      () => {
+        this.notify.success('Profile successfully updated');
+        this.editForm.reset(this.user);
+      },
+      error => this.notify.error(error)
+    );
   }
 }
